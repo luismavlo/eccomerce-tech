@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import EccomerceApp from './EccomerceApp';
+import EcommerceApp from './EcommerceApp';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <EccomerceApp />
+    <EcommerceApp />
   </React.StrictMode>,
   document.getElementById('root')
 );

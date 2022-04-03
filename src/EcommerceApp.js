@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import { store } from './redux/store/store'
 import AppRouter from './routes/AppRouter'
 
-const EccomerceApp = () => {
+const EcommerceApp = () => {
   return (
     <Provider store={store}>
         <AppRouter />
@@ -11,4 +11,4 @@ const EccomerceApp = () => {
   )
 }
 
-export default EccomerceApp
+export default EcommerceApp
