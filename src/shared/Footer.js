@@ -16,11 +16,11 @@ const Footer = () => {
     </div>
     <div className="footer__section">
       <h2 className="footer__title">Quick Links</h2>
-      <a href="" className="footer__link">Home</a>
-      <a href="" className="footer__link">About</a>
-      <a href="" className="footer__link">Error</a>
-      <a href="" className="footer__link">Shop</a>
-      <a href="" className="footer__link">Contact Us</a>
+      <a href="/#" className="footer__link">Home</a>
+      <a href="/#" className="footer__link">About</a>
+      <a href="/#" className="footer__link">Error</a>
+      <a href="/#" className="footer__link">Shop</a>
+      <a href="/#" className="footer__link">Contact Us</a>
     </div>
     <div className="footer__section">
       <h2 className="footer__title">Sign up for your offers</h2>
