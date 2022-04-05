@@ -24,7 +24,7 @@ const Testimonials = () => {
         <section className='flex' style={width}>
             {
                 testimonials.map(testimonial => (
-                    <div className="container__testimonials">
+                    <div className="container__testimonials" key={testimonial.name}>
                         <h2 className="section__title">Testimonials</h2>
                         <h3 className="testimonial__title">{testimonial.name}</h3>
                         <p className="testimonial__txt">{testimonial.text}</p>

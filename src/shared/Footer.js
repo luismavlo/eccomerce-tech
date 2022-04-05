@@ -27,7 +27,7 @@ const Footer = () => {
       <p className="footer__txt">By subscribing to our mailing list you will always get latest news and updates from us.</p>
       <input type="email" className="footer__input" placeholder="Enter your email" />
     </div>
-    <p className="copy">© 2021 Goggles. All Rights Reserved | Design by W3Layouts</p>
+    <p className="copy">© 2022 Tecnotech. All Rights Reserved | Design by W3Layouts</p>
   </footer>
   )
 }

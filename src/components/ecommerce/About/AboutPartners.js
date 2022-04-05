@@ -13,9 +13,9 @@ const AboutPartners = () => {
                             <h4>Partner 1</h4>
                             <span>Description</span>
                             <ul>
-                                <i class="fa-brands fa-facebook"></i>
-                                <i class="fa-brands fa-twitter"></i>
-                                <i class="fa-brands fa-google-plus-g"></i>
+                                <i className="fa-brands fa-facebook"></i>
+                                <i className="fa-brands fa-twitter"></i>
+                                <i className="fa-brands fa-google-plus-g"></i>
                             </ul>
                         </div>
                     </div>
@@ -27,9 +27,9 @@ const AboutPartners = () => {
                             <h4>Partner 2</h4>
                             <span>Description</span>
                             <ul>
-                                <i class="fa-brands fa-facebook"></i>
-                                <i class="fa-brands fa-twitter"></i>
-                                <i class="fa-brands fa-google-plus-g"></i>
+                                <i className="fa-brands fa-facebook"></i>
+                                <i className="fa-brands fa-twitter"></i>
+                                <i className="fa-brands fa-google-plus-g"></i>
                             </ul>
                         </div>
                     </div>
@@ -41,9 +41,9 @@ const AboutPartners = () => {
                             <h4>Partner 3</h4>
                             <span>Description</span>
                             <ul>
-                                <i class="fa-brands fa-facebook"></i>
-                                <i class="fa-brands fa-twitter"></i>
-                                <i class="fa-brands fa-google-plus-g"></i>
+                                <i className="fa-brands fa-facebook"></i>
+                                <i className="fa-brands fa-twitter"></i>
+                                <i className="fa-brands fa-google-plus-g"></i>
                             </ul>
                         </div>
                     </div>
@@ -55,9 +55,9 @@ const AboutPartners = () => {
                             <h4>Partner 4</h4>
                             <span>Description</span>
                             <ul>
-                                <i class="fa-brands fa-facebook"></i>
-                                <i class="fa-brands fa-twitter"></i>
-                                <i class="fa-brands fa-google-plus-g"></i>
+                                <i className="fa-brands fa-facebook"></i>
+                                <i className="fa-brands fa-twitter"></i>
+                                <i className="fa-brands fa-google-plus-g"></i>
                             </ul>
                         </div>
                     </div>
