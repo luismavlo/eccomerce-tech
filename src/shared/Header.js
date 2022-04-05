@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 
@@ -17,11 +17,11 @@ const Header = () => {
                     <span onClick={togleMenu} className="icon-menu" id="btn-menu"><i className="fas fa-bars"></i></span>
                     <nav className={`main-nav ${isOpen ? 'mostrar' : ''}`} id="main-nav">
                         <ul className="menu">
-                            <li className="menu__item"><a href="/#" className="menu__link">HOME</a></li>
-                            <li className="menu__item"><a href="/#" className="menu__link">ABOUT</a></li>
-                            <li className="menu__item"><a href="/#" className="menu__link">FEATURES</a></li>
-                            <li className="menu__item"><a href="/#" className="menu__link">SHOP</a></li>
-                            <li className="menu__item"><a href="/#" className="menu__link">CONTACT</a></li>
+                            <li className="menu__item"><Link to="/" className="menu__link">HOME</Link></li>
+                            <li className="menu__item"><Link to="/about" className="menu__link">ABOUT</Link></li>
+                            <li className="menu__item"><Link to="/" className="menu__link">FEATURES</Link></li>
+                            <li className="menu__item"><Link to="/" className="menu__link">SHOP</Link></li>
+                            <li className="menu__item"><Link to="/" className="menu__link">CONTACT</Link></li>
                         </ul>
                     </nav>
                 </div>
