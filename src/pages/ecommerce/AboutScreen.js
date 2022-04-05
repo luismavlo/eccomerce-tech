@@ -13,7 +13,10 @@ const AboutScreen = () => {
                 <AboutUs />
                 <AboutPartners />
                 <AboutDescription />
-                <Testimonials />
+                <div className='ovh'>
+                    <Testimonials />
+                </div>
+                
                 <AboutEditor />
                 <AboutTestions />
             </article>

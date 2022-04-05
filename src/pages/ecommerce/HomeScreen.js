@@ -21,9 +21,9 @@ const HomeScreen = () => {
           <ProductCard />
         </section>
 
-        <section className="container__testimonials">
-          <Testimonials />
-        </section>
+        
+        <Testimonials />
+        
 
 
         <div className="container-editor">

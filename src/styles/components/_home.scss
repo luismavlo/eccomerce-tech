@@ -43,7 +43,13 @@
   margin-top: 10px;
 }
 
+.flex{
+  display: flex;
+  transition: transform 1s;
+}
+
 .container__testimonials{
+  overflow: hidden;
   text-align: center;
   background: #F7F7F7;
   padding: 20px;
