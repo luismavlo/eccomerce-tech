@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import HomeScreen from "../pages/ecommerce/HomeScreen"
 import ProductScreen from "../pages/ecommerce/ProductScreen"
+import AboutScreen from '../pages/ecommerce/AboutScreen'
 import Footer from "../shared/Footer"
 import Header from "../shared/Header"
 
