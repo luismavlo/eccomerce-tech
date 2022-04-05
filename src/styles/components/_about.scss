@@ -1,0 +1,215 @@
+.container_about {
+    padding: 40px;
+}
+
+.about_us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about_us {
+    margin-right: 20px;
+}
+
+.about_container_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 30px;
+}
+
+.about_container_info h3 {
+    color: #353434;
+    font-size: 3em;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-block-end: 0.8em;
+}
+
+.about_container_info a {
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    border: 2px solid #ff4e00;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #353434;
+}
+
+.about_paragraph {
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    line-height: 1.9em;
+    color: #959596;
+}
+
+.about_title_partner {
+    color: #353434;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.container_partners {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about_team_info {
+    position: relative;
+    transform: translate(0, 10%, 0);
+    transition: opacity 0.3s;
+    opacity: 0;
+    bottom: 200px;
+    margin-bottom: -200px;
+    color: white;
+    
+        &:hover {
+            opacity: 1;
+            background-color: #35343493;
+        }
+}
+
+.about_team_info ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.about_team_info ul i {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid white;
+    margin: 10px;
+}
+
+.info_team {
+    width: 100%;
+    padding: 10px;
+    top: -200px;
+}
+
+.info_team h4 {
+    font-size: 20px;
+}
+
+.team_info {
+    width: 20%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+}
+
+.container_partners div img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.about_description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.about_description div {
+    width: 30%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.about_description div i {
+    font-size: 40px;
+    opacity: 0.8;
+}
+
+.about_description div h4 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.about_description div a {
+    color: black;
+}
+
+.container_abour_editor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.container_abour_editor div {
+    width: 47%;
+    margin: 10px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+
+        &:hover .editor__circle {
+            transform: scale(1.2);
+            bottom: -90px;
+            right: -50px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.2);
+            opacity: 0;
+            transition: all 0.5s;
+        }
+
+        &:hover:before {
+        opacity: 1;
+        }
+}
+
+.container_abour_editor div img {
+    width: 100%;
+}
+
+.container_about_testions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.container_about_testions div {
+    width: 300px;
+    text-align: center;
+}
+
+.container_about_testions div i {
+    font-size: 25px;
+    border: 1px solid black;
+    padding: 25px;
+    border-radius: 100%;
+
+        &:hover {
+            color: #ff4e00;
+        }
+}
+
+.container_about_testions div h3 {
+    color: #ff4e00;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
