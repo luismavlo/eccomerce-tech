@@ -1,52 +1,103 @@
-.main-header .container{
-    padding: 0 20px;
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+  box-sizing: border-box;
 }
-
+body {
+  margin: 0;
+  font-family: "Inconsolata";
+}
+img {
+  display: block;
+  width: 100%;
+}
+.main-header {
+  padding: 0 20px;
+}
 .main-header__title{
-    text-align: center;
-    font-size: 2.5em;
-    margin: 10px 0;
-    color: #454546;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+  text-align: center;
+  font-size: 2.5em;
+  margin: 10px 0;
+  color: #454546;
+  font-family: "Poppins";
 }
-
-.main-nav{
-    display: none;
-}
-
 .main-header__container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header__link {
+  color: #333;
+}
+
+/* Estilos del Menu */
+.main-nav {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  z-index: 999999;
+}
+.menu{
+  position: absolute;
+  top: 180px;
+  left: 0;
+  background: #212121;
+  width: 100%;
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+}
+.menu__item {
+  text-align: center;
+  margin: auto;
+}
+.menu__link {
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: block;
+}
+.menu__link:hover {
+  background: white;
+  color: #212121;
+}
+
+.mostrar{
+  opacity: 1;
+  visibility: visible;
 }
 
 .icon-menu{
-    font-size: 1.5em;
-    border: 1px solid #454546;
-    display: block;
-    padding: 10px 20px;
-    cursor: pointer;
+  font-size: 1.5em;
+  border: 1px solid #454546; 
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: auto;
 }
-
-.icon-phone{
-    color: red;
-}
-
 .main-header__btn{
-    display: block;
-    padding: 10px 25px;
-    color: #454546;
-    border: 1px solid #454546;
-    text-decoration: none;
+  display: block;
+  padding: 10px 30px;
+  color: #454546;
+  border: 1px solid #454546;
+  text-decoration: none;
 }
-
 .main-header__input{
-    display: block;
-    padding: 10px;
+  display: block;
+  padding: 10px;
+  width: 50%;
 }
 
-/*Estilos para web*/
+
+
+.main {
+  padding: 0 20px;
+}
+
+//Estilos para web
+
+
 
 @media screen and (min-width:1024px) { 
     .container{
@@ -136,3 +187,5 @@
       font-size: 1.5em;
     }
   }
+
+ 

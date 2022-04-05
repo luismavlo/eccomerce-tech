@@ -3,11 +3,14 @@ import ProductCard from '../../components/ecommerce/ProductCard'
 import Editor from '../../components/ui/Editor'
 import Testimonials from '../../components/ui/Testimonials'
 import Tips from '../../components/ui/Tips'
+import Slider from '../../shared/Slider'
 
 
 const HomeScreen = () => {
   return (
-    <main>
+    <>
+      <Slider />
+      <main>
       <div className='container'>
         <h2 className="main-title">New Arrivals for you</h2>
 
@@ -32,6 +35,7 @@ const HomeScreen = () => {
         </section>
       </div>
     </main>
+    </>
   )
 }
 

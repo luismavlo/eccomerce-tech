@@ -1,147 +1,134 @@
-main{
-    padding: 0 20px;
-}
-
 .container-products {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
-  }
-
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
 .product {
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-    position: relative;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  position: relative;
 
-    &::before{
-        content: "New";
-        background: #FF4E00;
-        padding: 10px;
-        width: 60px;
-        position: absolute;
-        top: 20px;
-        right: 10px;
-        transform: rotate(-90deg);
-        color: white;
-    }
+  &::before{
+    content: "New";
+    background: #FF4E00;
+    padding: 10px;
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transform: rotate(-90deg);
+    color: white;
   }
 
-  
-.product__img{
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-}
-
-.product__title{
-    text-align: center;
-}
-
-.product__price {
+  &:hover .product__icon {
     color: #FF4E00;
-    font-weight: bold;
+  }
 }
 
+.product__img{
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+.product__title{
+  text-align: center;
+}
+.product__price {
+  color: #FF4E00;
+  font-weight: bold;
+}
 .product__icon {
-    display: block;
-    margin-top: 10px;
-
-    &:hover .product__icon{
-        color: #FF4E00;
-    }
+  display: block;
+  margin-top: 10px;
 }
 
 .container__testimonials{
-    text-align: center;
-    background: #F7F7F7;
-    padding: 20px;
-    margin: 20px 0;
+  text-align: center;
+  background: #F7F7F7;
+  padding: 20px;
+  margin: 20px 0;
 }
-
 .testimonial__txt{
-    color: #777;
+  color: #777;
 }
-
 .container-editor{
-    margin-top: 20px;
+  margin-top: 20px;
 }
-  
+
 .editor__item{
-    height: 200px;
-    position: relative;
-    overflow: hidden;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
 
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255,255,255,0.2);
-        opacity: 0;
-        transition: all 0.5s;
-    }
+  &:hover .editor__circle{
+    transform: scale(1.2);
+    bottom: -90px;
+    right: -50px;
+  }
 
-    &:hover:before {
-        opacity: 1;
-    }
-
-    &:hover .editor__circle{
-        transform: scale(1.2);
-        bottom: -90px;
-        right: -50px;
-    }
-}
-
-.editor__img  {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-  
-  
-.editor__circle{
-    width: 200px;
-    height: 200px;
-    border: 2px solid white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: -200px;
-    right: -150px;
-    color: white;
-    padding: 20px;
-    padding-bottom: 70px;
-    padding-right: 50px;
-    font-size: 1.1em;
-    text-align: center;
-    font-weight: bold;
+    background: rgba(255,255,255,0.2);
+    opacity: 0;
     transition: all 0.5s;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+
 }
+.editor__img  {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.editor__circle{
+  width: 200px;
+  height: 200px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -200px;
+  right: -150px;
+  color: white;
+  padding: 20px;
+  padding-bottom: 70px;
+  padding-right: 50px;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
 
 .container-tips{
-    margin: 20px 0;
-    text-align: center;
+  margin: 20px 0;
+  text-align: center;
 }
-
 .tip i{
-    font-size: 2em;
-    color: #333;
-    padding: 20px 0;
+  font-size: 2em;
+  color: #333;
+  padding: 20px 0;
 }
-
 .tip .btn-shop {
-    color: #333;
+  color: #333;
 
-    &:hover{
-        color: white;
-    }
+  &:hover {
+    color: white;
+  }
 }
+
 
 @media screen and (min-width:768px) {
     .editor__item{
@@ -154,7 +141,7 @@ main{
     }
   }
 
-  /*Estilos para web*/
+  //Estilos para web
 
 @media screen and (min-width:1024px) { 
     .container-products {
@@ -190,3 +177,4 @@ main{
       height: 200px;
     }
   }
+

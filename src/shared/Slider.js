@@ -47,7 +47,7 @@ const Slider = () => {
                     <div className="slider__content">
                         <h2 className='slider__title'>Technology for you</h2>
                         <p className='slider__txt'>All products sale 50% off</p>
-                        <button className="btn-shop">SHOP NOW</button>
+                        <button className="btn-shop transparent">SHOP NOW</button>
                     </div> 
                 </div>
             </div>

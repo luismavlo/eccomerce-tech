@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 const Header = () => {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const togleMenu = () =>{
+        setIsOpen(!isOpen)
+    }
+
     return (
         <header className="main-header">
             <div className="container container--flex">
                 <div className="main-header__container">
                     <h1 className="main-header__title">TECNOTECH</h1>
-                    <span className="icon-menu" id="btn-menu"><i className="fas fa-bars"></i></span>
-                    <nav className="main-nav" id="main-nav">
+                    <span onClick={togleMenu} className="icon-menu" id="btn-menu"><i className="fas fa-bars"></i></span>
+                    <nav className={`main-nav ${isOpen ? 'mostrar' : ''}`} id="main-nav">
                         <ul className="menu">
                             <li className="menu__item"><a href="/#" className="menu__link">HOME</a></li>
                             <li className="menu__item"><a href="/#" className="menu__link">ABOUT</a></li>

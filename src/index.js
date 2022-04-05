@@ -4,6 +4,7 @@ import EcommerceApp from './EcommerceApp';
 import './styles/styles.scss'
 
 
+
 ReactDOM.render(
   <React.StrictMode>
     <EcommerceApp />
