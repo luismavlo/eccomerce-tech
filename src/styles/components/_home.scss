@@ -117,7 +117,6 @@
   transition: all 0.5s;
 }
 
-
 .container-tips{
   margin: 20px 0;
   text-align: center;
@@ -135,6 +134,158 @@
   }
 }
 
+.container_popup_home {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(119, 119, 119, 0.562);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1050;
+}
+
+.popup_information {
+  background-color: white;
+  margin-top: 50px;
+  padding: 50px;
+  max-width: 50%;
+  max-height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  animation: popup 1s;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+
+  70% {
+    transform: scale(1.6);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.popup_information i {
+  position: relative;
+  left: 53%;
+  top: -20px;
+  cursor: pointer;
+}
+
+.popup_information h6 {
+  color: #FF4E00;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 20px;
+  margin: 20px 0 0 0;
+}
+
+.popup_information h3 {
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 2em;
+  margin: 10px 0 0 0 ;
+  color: #222;
+  width: 60%;
+  text-align: center;
+}
+
+.popup_information form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-top: 20px;
+}
+
+.popup_information form label {
+  color: #676262;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.popup_information form input {
+  -webkit-transition: 0.5s all;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.popup_information form button {
+  box-shadow: 2px 2px #54575a;
+  background: #ff4e00;
+  padding: 0.7em 2em;
+  letter-spacing: 1px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 40%;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s all;
+
+    &:hover {
+      background-color: #222;
+    }
+}
+
+.popup_information a {
+  font-size: 1.2em;
+  color: #b4b7bb;
+  text-decoration: none;
+}
+
+@media only screen and ( min-width: 200px ) and (max-width: 767px) {
+  .popup_information {
+    max-width: 80%;
+    max-height: 60%;
+  }
+
+  .popup_information i {
+    left: 65%;
+    top: -5px;
+  }
+
+  .popup_information h3 {
+    font-size: 1.5em;
+    width: 100%;
+  }
+
+  .popup_information form {
+    width: 100%;
+  }
+
+  .popup_information form button {
+    width: 70%;
+  }
+
+  .popup_information a {
+    font-size: 1em;
+    text-align: center;
+  }
+}
 
 @media screen and (min-width:768px) {
     .editor__item{
