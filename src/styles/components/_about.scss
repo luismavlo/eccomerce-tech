@@ -214,3 +214,63 @@
     letter-spacing: 1px;
     font-weight: 600;
 }
+
+
+@media only screen and ( min-width: 200px ) and (max-width: 767px) {
+    .container_about {
+        padding: 20px;
+    }
+
+    .about_us {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+
+    .about_us img {
+        width: 100%;
+    }
+
+    .about_container_info h3 {
+        font-size: 1.7em;
+        letter-spacing: 0px;
+        margin-top: 20px;
+    }
+
+    .about_title_partner {
+        font-size: 1.7em;
+        letter-spacing: 0px;
+    }
+
+    .container_partners {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .team_info {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .about_description {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .about_description div {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .container_abour_editor {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .container_abour_editor div {
+        width: 100%;
+        margin: 0 0 20px;
+        height: 100%;
+    }
+
+}
