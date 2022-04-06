@@ -9,11 +9,20 @@ const ShopScreen = () => {
             <img src={promo7} className="shop__banner" alt="" />
             <div className='container__shop'>
                 <h2>New Arrivals for you</h2>
-                <section>
+                <section className='shop__main-content shop__content-product'>
                     <aside className='shop__aside'>
                         <Aside />
                     </aside>
                     <section className="container-products shop__products">
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
                         <ProductCard />
                         <ProductCard />
                         <ProductCard />

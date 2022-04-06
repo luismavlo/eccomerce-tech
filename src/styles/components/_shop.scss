@@ -6,6 +6,10 @@
     margin-bottom: 10px;
 }
 
+.shop__main-content{
+    width: 100%;
+}
+
 .container__shop{
     padding: 0 10px;
 }
@@ -35,4 +39,22 @@
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 20px;
+}
+
+@media screen and (min-width:1024px) { 
+    .shop__content-product{
+        display: flex;
+        gap: 10px;
+        .shop__aside{
+            width: 20%;
+        }
+
+        .container-products{
+            width: 80%;
+
+            .product{
+                height: 300px;
+            }
+        }
+    }
 }
