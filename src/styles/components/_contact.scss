@@ -1,0 +1,147 @@
+.container_contact_info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container_contact_info h3 {
+    font-size: 3em;
+    color: #353434;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.container_contact_info p.paraghrap {
+    letter-spacing: 5px;
+    font-size: 1em;
+    opacity: 0.5;
+}
+
+.contact_info_details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.contact_details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 40px 70px 40px 60px;
+    border: 1px solid #e9ebec;
+}
+
+.contact_details i {
+    font-size: 35px;
+    margin: 30px 50px 30px 30px;
+    color: #ff4e00;
+}
+
+.contact_date {
+    text-align: left;
+}
+
+.contact_date h6 {
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.contact_date p {
+    color: #2a8490;
+}
+
+.container_contact_form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact_form_one {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 30px 0 0;
+}
+
+.contact_form_one label {
+    color: #313233;
+    letter-spacing: 2px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.contact_form_one input {
+    padding: 15px 15px;
+    font-size: 14px;
+    color: #777;
+    background: #f7f7f7;
+    width: 100%;
+    letter-spacing: 1px;
+    border: 1px solid #ebeeef;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact_form_two {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.contact_form_two textarea {
+    min-height: 150px;
+    height: 180px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    resize: none;
+    outline: none;
+    padding: 15px 15px;
+    color: #777;
+    background: #f7f7f7;
+    width: 100%;
+    letter-spacing: 1px;
+    border: 1px solid #ebeeef;
+}
+
+.contact_form_two button {
+    outline: none;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #fff;
+    background: #0e0f10;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.5s all;
+    font-weight: 600;
+    cursor: pointer;
+
+        &:hover {
+            background: #ff4e00;
+        }
+}
+
+@media only screen and ( min-width: 200px ) and (max-width: 767px) {
+    .container_contact_info p.paraghrap {
+        margin: 20px;
+    }
+
+    .contact_info_details div.contact_details {
+        width: 100%;
+        margin: 20px;
+    }
+
+    .container_contact_form form {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .contact_form_one, .contact_form_two {
+        width: 90%;
+        margin: 20px;
+    }
+}

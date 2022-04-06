@@ -13,10 +13,9 @@ const AboutScreen = () => {
                 <AboutUs />
                 <AboutPartners />
                 <AboutDescription />
-                <div className='ovh'>
-                    <Testimonials />
-                </div>
-                
+                    <div className='ovh'>
+                        <Testimonials />
+                    </div>
                 <AboutEditor />
                 <AboutTestions />
             </article>
