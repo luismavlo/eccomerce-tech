@@ -5,19 +5,19 @@ const AboutDescription = () => {
     return (
         <section className="about_description">
             <div>
-                <i class="fa-regular fa-hand"></i>
+                <i className="fa-regular fa-hand"></i>
                 <h4>Satisfaction Guaranteed</h4>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 <Link to="/" className="btn-shop">SHOP NOW</Link>
             </div>
             <div>
-                <i class="fa-solid fa-rocket"></i>
+                <i className="fa-solid fa-rocket"></i>
                 <h4>Fast Shipping</h4>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 <Link to="/" className="btn-shop">SHOP NOW</Link>
             </div>
             <div>
-                <i class="fa-solid fa-helmet-safety"></i>
+                <i className="fa-solid fa-helmet-safety"></i>
                 <h4>UV Protection</h4>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 <Link to="/" className="btn-shop">SHOP NOW</Link>
