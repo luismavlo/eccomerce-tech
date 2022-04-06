@@ -1,9 +1,14 @@
 import React from 'react';
+import ContactInfo from '../../components/ecommerce/Contact/ContactInfo';
+import ContactForm from '../../components/ecommerce/Contact/ContactForm';
+import ContactMap from '../../components/ecommerce/Contact/ContactMap';
 
 const ContactScreen = () => {
     return (
         <section>
-            <h2>Contact</h2>
+            <ContactInfo />
+            <ContactForm />
+            <ContactMap />
         </section>
     );
 }
