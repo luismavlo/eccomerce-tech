@@ -4,6 +4,7 @@ import ProductScreen from "../pages/ecommerce/ProductScreen"
 import AboutScreen from '../pages/ecommerce/AboutScreen'
 import Footer from "../shared/Footer"
 import Header from "../shared/Header"
+import ShopScreen from "../pages/ecommerce/ShopScreen"
 
 const StoreRouter = () => {
     return (
@@ -11,8 +12,9 @@ const StoreRouter = () => {
             <Header />
                 <Routes>
                     <Route path="product/:id" element={ <ProductScreen />} />
-                    <Route path="/*" element={ <HomeScreen />} />
                     <Route path="about" element={ <AboutScreen /> } />
+                    <Route path="shop" element={ <ShopScreen /> } />
+                    <Route path="/*" element={ <HomeScreen />} />            
                 </Routes>
             <Footer />
         </>
