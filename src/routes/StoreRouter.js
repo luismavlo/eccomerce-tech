@@ -14,12 +14,9 @@ const StoreRouter = () => {
                 <Routes>
                     <Route path="product/:id" element={ <ProductScreen />} />
                     <Route path="about" element={ <AboutScreen /> } />
-<<<<<<< HEAD
                     <Route path="contact" element={ <ContactScreen /> } />
-=======
                     <Route path="shop" element={ <ShopScreen /> } />
                     <Route path="/*" element={ <HomeScreen />} />            
->>>>>>> developer
                 </Routes>
             <Footer />
         </>
