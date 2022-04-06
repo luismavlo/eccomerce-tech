@@ -15,10 +15,6 @@ const Aside = () => {
         setValue(newValue);
     };
 
-    console.log(value)
-
-
-
     return (
         <>
             <h3>Search Here...</h3>
