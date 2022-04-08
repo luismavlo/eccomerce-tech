@@ -1,3 +1,6 @@
 export const types = {
-  authLogin: '[Auth] Login'
+  authLogin: '[Auth] Login',
+
+  uiOpenModal: '[ui] Open modal',
+  uiCloseModal: '[ui] Close modal'
 }

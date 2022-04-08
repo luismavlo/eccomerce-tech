@@ -1,9 +1,17 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { openModal } from '../redux/actions/ui';
 
 const Header = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+
+    const dispatch = useDispatch();
+
+    const handleOpenModal = () =>{
+        dispatch(openModal());
+    }
 
     const togleMenu = () =>{
         setIsOpen(!isOpen)
@@ -30,7 +38,7 @@ const Header = () => {
                     <p className="main-header__txt"><i className="fas fa-phone"></i> Call 12345678099</p>
                 </div>
                 <div className="main-header__container">
-                    <a href="/#" className="main-header__link"><i className="fas fa-user"></i></a>
+                    <span onClick={ handleOpenModal } className="main-header__link"><i className="fas fa-user"></i></span>
                     <a href="/#" className="main-header__btn">My cart <i className="fas fa-shopping-cart"></i></a>
                     <input type="search" className="main-header__input" placeholder="Buscar productos" /><i className="fas fa-search"></i>
                 </div>

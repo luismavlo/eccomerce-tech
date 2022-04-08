@@ -6,10 +6,20 @@ import ContactScreen from '../pages/ecommerce/ContactScreen'
 import Footer from "../shared/Footer"
 import Header from "../shared/Header"
 import ShopScreen from "../pages/ecommerce/ShopScreen"
+import ModalLogin from "../components/ui/ModalLogin"
+import { useSelector } from "react-redux"
 
 const StoreRouter = () => {
+
+    const { modalOpen } = useSelector( state => state.ui );
+
     return (
-        <>  
+        <>   
+            {
+                modalOpen && <ModalLogin />
+            }
+            
+            
             <Header />
                 <Routes>
                     <Route path="product/:id" element={ <ProductScreen />} />

@@ -15,6 +15,7 @@ const HomeScreen = () => {
     setPopUp(!popUp);
   }, []);
 
+    console.log('hola')
   return (
     <>
       <Slider />
@@ -28,7 +29,10 @@ const HomeScreen = () => {
               <ProductCard />
               <ProductCard />
             </section>
-            <Testimonials />
+            <div className='ovh'>
+              <Testimonials />
+            </div>
+            
             <div className="container-editor">
               <Editor />
             </div>
