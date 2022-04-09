@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { closeModal } from '../../redux/actions/ui';
+import FormLogin from '../ecommerce/typeSign/FormLogin';
+import FormRegister from '../ecommerce/typeSign/FormRegister';
 
 const ModalLogin = () => {
+
+  const [handleTypeLog, setHandleTypeLog] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -12,27 +16,16 @@ const ModalLogin = () => {
 
   return (
     <section className='modal animate__animated animate__fadeIn'>
-      <div className="modal__container">
+      <div className="modal__container" style={{overflow: 'auto'}}>
         <div className='modal__close' onClick={handleCloseModal}>
           <i class="fa-solid fa-xmark"></i>
         </div>
-        <h2>Login Now</h2>
-        <div className='modal__content-form'>
-          <form >
-            <div className="modal__input-container">
-              <label htmlFor="email">Email address</label>
-              <input type="email" name='email' />
-              <small>We'll never share your email with anyone else.</small>
-            </div>
-
-            <div className="modal__input-container">
-              <label htmlFor="password">Password</label>
-              <input type="email" name='password' />
-            </div>
-
-            <input type="submit" value="Sign In" className='modal__btn' />
-          </form>
-        </div>
+        
+        {
+           !handleTypeLog 
+           ? <FormLogin  setHandleTypeLog={setHandleTypeLog}/>
+           : <FormRegister setHandleTypeLog={setHandleTypeLog}/>
+        }
       </div>
     </section>
   )
