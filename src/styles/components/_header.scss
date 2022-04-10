@@ -82,6 +82,14 @@ img {
   border: 1px solid #454546;
   text-decoration: none;
 }
+
+.main-header__btn-logout{
+  display: block;
+  padding: 10px;
+  color: #454546;
+  border: 1px solid #454546;
+  text-decoration: none;
+}
 .main-header__input{
   display: block;
   padding: 10px;
@@ -161,6 +169,10 @@ img {
       background: #333;
       color: white;
     }
+
+    .main-header__btn-logout{
+      margin-bottom: 10px;
+    }
 }
 
 @media screen and (min-width:1280px) { 
@@ -172,6 +184,10 @@ img {
     }
     .main-header__container:nth-child(2){
       font-size: 1.3em;
+    }
+
+    .main-header__btn-logout{
+      margin-bottom: 20px;
     }
 }
 

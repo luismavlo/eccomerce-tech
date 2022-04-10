@@ -21,7 +21,7 @@ const Testimonials = () => {
     }
 
     return (
-        <section className='flex' style={width}>
+        <section className='flex ovh' style={width}>
             {
                 testimonials.map(testimonial => (
                     <div className="container__testimonials" key={testimonial.name}>

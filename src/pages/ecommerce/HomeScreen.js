@@ -11,6 +11,7 @@ const HomeScreen = () => {
 
   const [ popUp, setPopUp ] = useState(false);
 
+  
   useEffect(() => {
     setPopUp(!popUp);
   }, []);
@@ -28,7 +29,10 @@ const HomeScreen = () => {
               <ProductCard />
               <ProductCard />
             </section>
-            <Testimonials />
+            <div className='ovh'>
+              <Testimonials />
+            </div>
+            
             <div className="container-editor">
               <Editor />
             </div>
