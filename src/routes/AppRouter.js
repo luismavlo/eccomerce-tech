@@ -11,6 +11,10 @@ import StoreRouter from './StoreRouter'
 
   
   const AppRouter = () => {
+
+  const token = localStorage.getItem('token')
+  
+   
     return (
       <BrowserRouter>
         <Routes>
@@ -21,7 +25,7 @@ import StoreRouter from './StoreRouter'
             } />
 
             <Route path='/store/*' element={
-                <PrivateRouter>
+                <PrivateRouter isAuthenticated={ !!token }>
                     <ClientRouter />
                 </PrivateRouter>
             } />

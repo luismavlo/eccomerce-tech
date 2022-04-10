@@ -11,11 +11,11 @@ const HomeScreen = () => {
 
   const [ popUp, setPopUp ] = useState(false);
 
+  
   useEffect(() => {
     setPopUp(!popUp);
   }, []);
 
-    console.log('hola')
   return (
     <>
       <Slider />
