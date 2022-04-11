@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Slider from '@mui/material/Slider';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -7,9 +7,11 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { deepOrange, grey } from '@mui/material/colors';
 
-const Aside = () => {
+const Aside = ({value, setValue, type, setType}) => {
 
-    const [value, setValue] = useState([300, 800]);
+    const handleChangeType = (event) =>{
+        setType(event.target.value)
+    }
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -39,7 +41,8 @@ const Aside = () => {
                     aria-labelledby="demo-radio-buttons-group-label"
                     defaultValue="female"
                     name="radio-buttons-group"
-                    
+                    value={type}
+                    onChange={handleChangeType}
                 >
                     <FormControlLabel value="tv" control={<Radio sx={{color:grey[600], '&.Mui-checked': {color:deepOrange[500]}, }} />} label="Smart TV" />
                     <FormControlLabel value="computers" control={<Radio sx={{color:grey[600], '&.Mui-checked': {color:deepOrange[500]}, }} />} label="Computers" />

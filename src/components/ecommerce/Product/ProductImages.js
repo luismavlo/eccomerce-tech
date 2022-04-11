@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
+
 import { promo1, promo2, promo3, promo4, promo5 } from '../../../images';
 
 const ProductImages = () => {
 
     const images = [ promo1, promo2, promo3, promo4, promo5 ];
 
+        
     const [ handleNext, setHandleNext ] = useState(0);
 
     useEffect(() => {
@@ -25,7 +27,7 @@ const ProductImages = () => {
             <div className="producto_images_option">
                 {
                     images.map( (image, i) => (
-                        <div className={image === images[handleNext] ? 'image_selected' : ''}>
+                        <div className={image === images[handleNext] ? 'image_selected' : ''} key={i}>
                             <img 
                                 src={image} 
                                 alt="Imagen Producto" 

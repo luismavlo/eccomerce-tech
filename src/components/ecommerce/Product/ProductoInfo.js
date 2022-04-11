@@ -1,12 +1,16 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const ProductoInfo = () => {
+
+    const { productDetail } = useSelector( state => state.products );
+
     return (
         <section className="container_product_info">
-            <h3>Irayz Butterfly Sunglasses (Black)</h3>
-            <p>$650</p>
+            <h3>{ productDetail.title }</h3>
+            <p>${ productDetail.price }</p>
             <p>Description</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis porro odit, minima voluptatibus sed eius odio magnam quod? Fuga, obcaecati.</p>
+            <p>{ productDetail.description }</p>
             <h5>Quantity</h5>
             <form>
                 <input type="number" />

@@ -8,6 +8,7 @@
   padding: 20px;
   text-align: center;
   position: relative;
+  height: 300px;
 
   &::before{
     content: "New";
@@ -19,6 +20,7 @@
     right: 10px;
     transform: rotate(-90deg);
     color: white;
+    z-index: 200;
   }
 
   &:hover .product__icon {
@@ -29,7 +31,7 @@
 .product__img{
   width: 100%;
   height: 120px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .product__title{
   text-align: center;

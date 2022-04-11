@@ -5,6 +5,7 @@ import Testimonials from '../../components/ui/Testimonials'
 import Tips from '../../components/ui/Tips'
 import Slider from '../../shared/Slider'
 import PopUp from '../../components/ui/PopUp';
+import { useSelector } from 'react-redux'
 
 
 const HomeScreen = () => {
@@ -16,6 +17,11 @@ const HomeScreen = () => {
     setPopUp(!popUp);
   }, []);
 
+  const { products } = useSelector( state => state.products );
+
+  const newProductsFiltered = products.filter((product, index) => index < 4);
+
+
   return (
     <>
       <Slider />
@@ -24,10 +30,11 @@ const HomeScreen = () => {
           <div className='container'>
             <h2 className="main-title">New Arrivals for you</h2>
             <section className="container-products">
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
+              {
+                newProductsFiltered.map( product => ((
+                  <ProductCard product={product} key={ product.id } />
+                )))
+              }
             </section>
             <div className='ovh'>
               <Testimonials />

@@ -1,63 +1,37 @@
 import React from 'react';
-import { promo3 } from '../../../images';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 
 const ProductFeatures = () => {
+
+    const { productDetail, products } = useSelector(state => state.products);
+
+
+    const relatedProducts = products.filter(product => product.category.name === productDetail.category)
+
+    console.log(relatedProducts)
     return (
         <section className="container_product_features">
             <h3>Featured Products</h3>
             <div className="product_features">
-                <div className="producto_feature_info">
-                    <div className="product_image">
-                        <img src={promo3} alt="Imagen Prueba" />
-                        <div className="producto_button">
-                            <a href="#">QUICK VIEW</a>
+                {
+                    relatedProducts.map(product => (
+                        <div className="product">
+                            <div className="product_image">
+                                <img src={product.productImgs[0]} className='product__img' alt="Imagen Prueba" />
+                                <div className="producto_button">
+                                    <Link to={`/product/${product.id}`} >QUICK VIEW</Link>
+                                </div>
+                            </div>
+                            <div className="product__description">
+                                <p className="product__title">{product.title}</p>
+                                <span className="product__price">${product.price}</span>
+                            </div>
+                            <i className="product__icon fa-solid fa-cart-plus"></i>
                         </div>
-                    </div>
-                    <p>
-                        Fastrack Aviator
-                        <i className="product__icon fa-solid fa-cart-plus"></i>
-                    </p>
-                    <span>$650</span>
-                </div>
-                <div className="producto_feature_info">
-                    <div className="product_image">
-                        <img src={promo3} alt="Imagen Prueba" />
-                        <div className="producto_button">
-                            <a href="#">QUICK VIEW</a>
-                        </div>
-                    </div>
-                    <p>
-                        Fastrack Aviator
-                        <i className="product__icon fa-solid fa-cart-plus"></i>
-                    </p>
-                    <span>$650</span>
-                </div>
-                <div className="producto_feature_info">
-                    <div className="product_image">
-                        <img src={promo3} alt="Imagen Prueba" />
-                        <div className="producto_button">
-                            <a href="#">QUICK VIEW</a>
-                        </div>
-                    </div>
-                    <p>
-                        Fastrack Aviator
-                        <i className="product__icon fa-solid fa-cart-plus"></i>
-                    </p>
-                    <span>$650</span>
-                </div>
-                <div className="producto_feature_info">
-                    <div className="product_image">
-                        <img src={promo3} alt="Imagen Prueba" />
-                        <div className="producto_button">
-                            <a href="#">QUICK VIEW</a>
-                        </div>
-                    </div>
-                    <p>
-                        Fastrack Aviator
-                        <i className="product__icon fa-solid fa-cart-plus"></i>
-                    </p>
-                    <span>$650</span>
-                </div>
+                    ))
+                }
             </div>
         </section>
     );
