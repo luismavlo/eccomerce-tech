@@ -45,6 +45,7 @@ img {
   list-style: none;
   padding: 0px;
   margin: 0;
+  z-index: 100000;
 }
 .menu__item {
   text-align: center;
@@ -100,6 +101,15 @@ img {
 
 .main {
   padding: 0 20px;
+}
+
+.header__content-search{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.centerY{
+  line-height: 40px;
 }
 
 //Estilos para web

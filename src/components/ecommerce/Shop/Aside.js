@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from '@mui/material/Slider';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -6,8 +6,13 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { deepOrange, grey } from '@mui/material/colors';
+import { useDispatch } from 'react-redux';
+import { startFilterProductPerName } from '../../../redux/actions/products';
 
 const Aside = ({value, setValue, type, setType}) => {
+
+    const [search, setSearch] = useState('');
+    const dispatch = useDispatch();
 
     const handleChangeType = (event) =>{
         setType(event.target.value)
@@ -16,12 +21,18 @@ const Aside = ({value, setValue, type, setType}) => {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+    
+
+    const filterHeadline = (e) =>{
+        e.preventDefault();
+        dispatch(startFilterProductPerName( search ))
+    }   
 
     return (
         <>
             <h3>Search Here...</h3>
-            <form action="">
-                <input type="text" placeholder='Search here...' />
+            <form action="" onSubmit={filterHeadline}>
+                <input type="text" placeholder='Search here...' value={search} onChange={ e => setSearch(e.target.value)} />
             </form>
             <div className='shop__priceRange'>
                 <h3>Price range</h3>

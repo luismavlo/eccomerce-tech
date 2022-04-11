@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import { startLogout } from '../redux/actions/auth';
+import { startFilterProductPerName } from '../redux/actions/products';
 import { openModal } from '../redux/actions/ui';
 
 const Header = () => {
@@ -10,6 +11,8 @@ const Header = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const token = localStorage.getItem('token')
+    const [search, setSearch] = useState('');
+
 
     const handleOpenModal = () =>{
         dispatch(openModal());
@@ -23,6 +26,11 @@ const Header = () => {
         dispatch(startLogout())
         navigate('/')
     }
+
+    const filterHeadline = (e) =>{
+        e.preventDefault();
+        dispatch(startFilterProductPerName( search ))
+    }   
 
     return (
         <header className="main-header">
@@ -55,7 +63,13 @@ const Header = () => {
                     }
                     
                     <a href="/#" className="main-header__btn">My cart <i className="fas fa-shopping-cart"></i></a>
-                    <input type="search" className="main-header__input" placeholder="Buscar productos" /><i className="fas fa-search"></i>
+                    
+                    <form className='header__content-search' onSubmit={filterHeadline}>
+                        <input type="search" className="main-header__input" placeholder="Buscar productos" value={search} onChange={e => setSearch(e.target.value)} /><i className="centerY fas fa-search"></i>
+                    </form>
+                        
+                    
+                    
                 </div>
             </div>
         </header>

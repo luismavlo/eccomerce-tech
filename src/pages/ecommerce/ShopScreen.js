@@ -14,7 +14,6 @@ const ShopScreen = () => {
 
     const { products } = useSelector( state => state.products );
 
-    console.log(products)
 
     const filterProductPerType = () =>{
         switch (true) {

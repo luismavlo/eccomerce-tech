@@ -17,6 +17,14 @@ export const startSetProductDetail = ( id ) =>{
     }
 }
 
+export const startFilterProductPerName = ( query )=>{
+    return ( dispatch )=>{
+        console.log(query)
+        axios.get(`https://ecommerce-api-react.herokuapp.com/api/v1/products?query=${query}`, getConfig())
+             .then(res => dispatch(setProducts(res.data.data)))
+    }
+}
+
 const setProducts = ( products ) => ({
     type: types.productsList,
     payload: products
