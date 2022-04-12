@@ -2,7 +2,8 @@ import { types } from '../types/types';
 
 const initialState = {
     modalOpen: false,
-    typeLog: false
+    typeLog: false,
+    alertScreen: false
 }
 
 export const uiReducer = (state = initialState, action) => {
@@ -30,6 +31,12 @@ export const uiReducer = (state = initialState, action) => {
             return{
                 ...state,
                 typeLog: true
+            }
+        
+        case types.uiShowAlertScreen:
+            return {
+                ...state,
+                alertScreen: action.payload
             }
     
         default:
