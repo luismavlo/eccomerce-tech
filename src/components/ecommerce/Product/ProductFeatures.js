@@ -7,17 +7,15 @@ const ProductFeatures = () => {
 
     const { productDetail, products } = useSelector(state => state.products);
 
-
     const relatedProducts = products.filter(product => product.category.name === productDetail.category)
 
-    console.log(relatedProducts)
     return (
         <section className="container_product_features">
             <h3>Featured Products</h3>
             <div className="product_features">
                 {
                     relatedProducts.map(product => (
-                        <div className="product">
+                        <div className="product" key={product.id}>
                             <div className="product_image">
                                 <img src={product.productImgs[0]} className='product__img' alt="Imagen Prueba" />
                                 <div className="producto_button">
