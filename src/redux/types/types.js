@@ -7,7 +7,9 @@ export const types = {
   uiCloseModal: '[ui] Close modal',
   uiShowFormLogin: '[ui] Show form login',
   uiShowFormRegister: '[ui] Show form register',
+  uiShowAlertScreen: '[iu] Show Alert Screen',
 
   productsList: '[products] Products list',
-  productSetDetail: '[products] Set Detail'
+  productSetDetail: '[products] Set Detail',
+  productAddToCart: '[products] Add Cart'
 }
