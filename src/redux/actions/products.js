@@ -1,7 +1,6 @@
 import axios from "axios"
 import { types } from "../types/types"
 import { showAlertScreen } from '../actions/ui';
-import { fetchConToken } from "../../helpers/fetch";
 import getConfig from "../../helpers/getConfig";
 
 
