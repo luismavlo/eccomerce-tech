@@ -13,11 +13,13 @@ const ProductoInfo = () => {
 
     const { register, handleSubmit } = useForm();
 
-    const addToCart = (data) => {
+    const addToCart = (data, e) => {
         const product = {
             id: productDetail?.id,
             quantity: parseInt(data?.quantity)
         }
+
+        e.target.reset();
 
         dispatch(startAddProductCart(product))
             .then( () => <AlertScreen message="Se a agregado el producto al carrito" severity="success" />);
