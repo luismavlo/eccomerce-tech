@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react';
-
-
-import { promo1, promo2, promo3, promo4, promo5 } from '../../../images';
+import { useSelector } from 'react-redux';
 
 const ProductImages = () => {
 
-    const images = [ promo1, promo2, promo3, promo4, promo5 ];
+    const productDetail = useSelector( state => state.products.productDetail);
 
-        
+    const images = productDetail?.productImgs;
+
     const [ handleNext, setHandleNext ] = useState(0);
 
     useEffect(() => {
         const interval = setTimeout( () => {
-            if(handleNext === 4){
-                setHandleNext(1);
+            if(handleNext === images?.length - 1){
+                setHandleNext(0);
             } else {
-                setHandleNext(handleNext => handleNext + 1);
+                setHandleNext(handleNext + 1);
             }
           }, 6000);
           return () => clearInterval(interval);
@@ -23,15 +22,16 @@ const ProductImages = () => {
 
     return (
         <section className="product_images">
-            <img src={images[handleNext]} alt="Imagen Procto Principal" className="image_principal"/>
+            <div className="product_image_start">
+                <img src={images?.[handleNext]} alt="Imagen Procto Principal" className="image_principal"/>
+            </div>
             <div className="producto_images_option">
                 {
-                    images.map( (image, i) => (
-                        <div className={image === images[handleNext] ? 'image_selected' : ''} key={i}>
+                    productDetail.productImgs?.map( (image, i) => (
+                        <div className={image === images[handleNext] ? 'image_selected' : ''} key={productDetail.productImgs[i]} >
                             <img 
                                 src={image} 
-                                alt="Imagen Producto" 
-                                key={images[i]} 
+                                alt="Imagen Producto"  
                                 onClick={ () => setHandleNext(i) }
                             />
                         </div>

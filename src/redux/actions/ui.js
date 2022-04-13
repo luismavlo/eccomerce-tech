@@ -16,3 +16,8 @@ export const showFormLogin = () =>({
 export const showFormRegister = () =>({
     type: types.uiShowFormRegister
 })
+
+export const showAlertScreen = (isLoading) => ({
+    type: types.uiShowAlertScreen,
+    payload: isLoading
+})
