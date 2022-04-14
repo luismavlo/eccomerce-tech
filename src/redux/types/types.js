@@ -11,5 +11,7 @@ export const types = {
 
   productsList: '[products] Products list',
   productSetDetail: '[products] Set Detail',
-  productAddToCart: '[products] Add Cart'
+  productAddToCart: '[products] Add Cart',
+
+  purchasesList: '[purchases] Purchases List'
 }
