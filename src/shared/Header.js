@@ -44,7 +44,7 @@ const Header = () => {
                             <li className="menu__item"><Link to="/about" className="menu__link">ABOUT</Link></li>
                             {
                                 token
-                                &&  <li className="menu__item"><Link to="/store/purshases" className="menu__link" disabled>PURCHASES</Link></li>
+                                &&  <li className="menu__item"><Link to="/store/purchases" className="menu__link" disabled>PURCHASES</Link></li>
                             }
                             <li className="menu__item"><Link to="/shop" className="menu__link">SHOP</Link></li>
                             <li className="menu__item"><Link to="/contact" className="menu__link">CONTACT</Link></li>

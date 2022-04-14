@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Purchases from '../../components/ecommerce/Purchases/Purchases';
 
 const PurshasesScreen = () => {
   return (
-    <div>PurshasesScreen</div>
+    <section className="container_purchases_total">
+      <Purchases />
+    </section>
   )
 }
 
-export default PurshasesScreen
+export default PurshasesScreen;
