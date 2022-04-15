@@ -18,7 +18,7 @@ const ProductImages = () => {
             }
           }, 6000);
           return () => clearInterval(interval);
-    }, [handleNext]);
+    }, [handleNext, images]);
 
     return (
         <section className="product_images">

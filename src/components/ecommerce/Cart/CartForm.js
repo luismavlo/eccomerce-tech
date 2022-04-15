@@ -17,13 +17,13 @@ const CartForm = () => {
 
     useEffect(() => {
         dispatch(startSetCart());
-    }, [startUpdateQuantity]);
+    }, [dispatch]);
 
     const subtotal = () => {
 
         let sum = 0;
 
-        cartList.products?.map( price => {
+        cartList.products?.map( (price) => {
             sum += parseInt(price.price) * price?.productsInCart?.quantity;
         });
 
