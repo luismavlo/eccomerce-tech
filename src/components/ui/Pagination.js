@@ -12,7 +12,7 @@ const Pagination = ({ nextPage, prevPage, currentPage, totalPost, postsPerPage, 
     return (
         <div className="Pagination">
             {
-                currentPage === 1 ? ("") : (<button onClick={ prevPage }>Previous</button>)
+                currentPage === 0 ? ("") : (<button onClick={ prevPage }>Previous</button>)
             }
             {
                 pageNumbers.map( number => (

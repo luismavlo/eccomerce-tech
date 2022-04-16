@@ -154,13 +154,14 @@
   margin-top: 50px;
   padding: 50px;
   max-width: 50%;
-  max-height: 55%;
+  max-height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transform: scale(1);
   animation: popup 1s;
+  position: relative;
 }
 
 @keyframes popup {
@@ -182,9 +183,9 @@
 }
 
 .popup_information i {
-  position: relative;
-  left: 53%;
-  top: -20px;
+  position: absolute;
+  left: 95%;
+  bottom: 90%;
   cursor: pointer;
 }
 
@@ -266,8 +267,7 @@
   }
 
   .popup_information i {
-    left: 65%;
-    top: -5px;
+    left: 90%;
   }
 
   .popup_information h3 {

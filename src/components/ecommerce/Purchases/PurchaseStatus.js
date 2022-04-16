@@ -2,7 +2,7 @@ import React from 'react';
 import PurchaseInfo from './PurchaseInfo';
 
 const PurchaseStatus = ({ purchases }) => {
-
+    
     return (
         <>
              <div className="purchases_list">
