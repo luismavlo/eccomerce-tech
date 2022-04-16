@@ -64,7 +64,7 @@ const CartForm = () => {
             }
             {
                 Object.keys(cartList).length === 0 ? (
-                    <h2>You have nothing in your shopping cart. Continue Shopping</h2>
+                    <span></span>
                 ) : cartList.products?.length === 0 ? (
                     <h2>You have nothing in your shopping cart. Continue Shopping</h2>
                 ) : (

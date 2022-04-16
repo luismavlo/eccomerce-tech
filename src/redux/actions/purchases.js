@@ -2,6 +2,7 @@ import axios from "axios"
 import { types } from "../types/types"
 import getConfig from "../../helpers/getConfig";
 import { showAlertScreen } from '../actions/ui';
+import { closeCart } from '../actions/cart';
 
 export const startSetPurchases = () => {
     return (dispatch) =>{
@@ -15,12 +16,14 @@ export const startPurchaseCart = () => {
         axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/purchases', {}, getConfig())
             .then(res => {
                 dispatch(showAlertScreen(true))
-                dispatch(setPurcahseCart());
-                dispatch(setPurchases(res.data.data));
+                dispatch(setPurcahseCart())
             })
             .finally( () => {
                 setTimeout(() => {
                     dispatch(showAlertScreen(false))
+                    setTimeout(() => {
+                        dispatch(closeCart(false))
+                    }, 1000);
                 }, 3000);
             });
     }
