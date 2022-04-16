@@ -21,8 +21,7 @@ const ProductoInfo = () => {
 
         e.target.reset();
 
-        dispatch(startAddProductCart(product))
-            .then( () => <AlertScreen message="Se a agregado el producto al carrito" severity="success" />);
+        dispatch(startAddProductCart(product));
     }
 
     return (

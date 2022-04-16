@@ -2,7 +2,7 @@ import React from 'react';
 import PurchaseInfo from './PurchaseInfo';
 
 const PurchaseStatus = ({ purchases }) => {
-
+    
     return (
         <>
              <div className="purchases_list">
@@ -13,6 +13,7 @@ const PurchaseStatus = ({ purchases }) => {
                                 <div className="purchase_info">
                                     <PurchaseInfo 
                                         purchase={purchase.cart}
+                                        key={purchase.id}
                                     />
                                 </div>
                         </div>

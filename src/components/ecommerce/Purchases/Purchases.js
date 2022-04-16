@@ -14,10 +14,10 @@ const Purchases = () => {
         dispatch(startSetPurchases()); 
     }, [dispatch]);
 
-    const [ currentPage, setCurrentPage ] = useState(1);
+    const [ currentPage, setCurrentPage ] = useState(0);
     const [ postsPerPage ] = useState(10);
 
-    const currentPurchases = purchases.purchases?.slice(currentPage, currentPage + postsPerPage);
+    const currentPurchases = purchases.slice(currentPage, currentPage + postsPerPage);
 
     const prevPage = () => {
         if(currentPage > 0) {
@@ -26,12 +26,14 @@ const Purchases = () => {
     }
 
     const nextPage = () => {
-        if(purchases.purchases?.length > currentPage + postsPerPage) {
+        if(purchases?.length > currentPage + postsPerPage) {
             setCurrentPage(currentPage + 1);
         }
     }
 
     const pagina = pageNumber => setCurrentPage(pageNumber);
+
+    console.log(currentPurchases.length)
 
     return (
         <>
@@ -40,14 +42,20 @@ const Purchases = () => {
                     purchases={currentPurchases}
                 />
             </article>
-            <Pagination
-                prevPage={prevPage}
-                nextPage={nextPage}
-                currentPage={currentPage}
-                totalPost={purchases.purchases?.length}
-                postsPerPage={postsPerPage}
-                pagina={pagina}
-            />
+            {
+                currentPurchases.length >= 10 ? (
+                    <Pagination
+                        prevPage={prevPage}
+                        nextPage={nextPage}
+                        currentPage={currentPage}
+                        totalPost={purchases?.length}
+                        postsPerPage={postsPerPage}
+                        pagina={pagina}
+                    />
+                ) : (
+                    <div></div>
+                )
+            }
         </>
     );
 };

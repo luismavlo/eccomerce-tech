@@ -1,18 +1,24 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import { startLogout } from '../redux/actions/auth';
 import { startFilterProductPerName } from '../redux/actions/products';
+import { showCartOpen } from '../redux/actions/cart';
 import { openModal } from '../redux/actions/ui';
+import CartScreen from '../pages/ecommerce/CartScreen';
 
 const Header = () => {
 
     const [isOpen, setIsOpen] = useState(false);
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const token = localStorage.getItem('token')
     const [search, setSearch] = useState('');
 
+    const { cartOpen } = useSelector( state => state.cart );
+   
+    const navigate = useNavigate();
+    
+    const dispatch = useDispatch();
+    
+    const token = localStorage.getItem('token');
 
     const handleOpenModal = () =>{
         dispatch(openModal());
@@ -62,14 +68,16 @@ const Header = () => {
                         : <span className="main-header__btn-logout" onClick={handleLogout}><i className="fa-solid fa-arrow-right-from-bracket"></i></span>
                     }
                     
-                    <a href="/#" className="main-header__btn">My cart <i className="fas fa-shopping-cart"></i></a>
+                    <button className="main-header__btn" onClick={ () => dispatch(showCartOpen(true)) }>My cart <i className="fas fa-shopping-cart"></i></button>
                     
                     <form className='header__content-search' onSubmit={filterHeadline}>
                         <input type="search" className="main-header__input" placeholder="Buscar productos" value={search} onChange={e => setSearch(e.target.value)} /><i className="centerY fas fa-search"></i>
                     </form>
-                        
-                    
-                    
+                    {
+                        token && (
+                            cartOpen && <CartScreen />
+                        )
+                    }
                 </div>
             </div>
         </header>
