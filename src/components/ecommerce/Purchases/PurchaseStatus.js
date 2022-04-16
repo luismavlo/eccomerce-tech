@@ -10,11 +10,9 @@ const PurchaseStatus = ({ purchases }) => {
                     purchases?.map( purchase => (
                         <div className="purchase_status" key={purchase.id}>
                             <p  className="purchase_title">date <span>{purchase.cart?.status} <i className="fa-solid fa-circle"></i></span></p>
-                                <div className="purchase_info">
-                                    <PurchaseInfo 
-                                        purchase={purchase.cart}
-                                    />
-                                </div>
+                                <PurchaseInfo 
+                                    purchase={purchase.cart}
+                                />
                         </div>
                     ))
                 }
