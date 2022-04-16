@@ -23,9 +23,9 @@ const CartForm = () => {
 
         let sum = 0;
 
-        cartList.products?.map( (price) => {
-            sum += parseInt(price.price) * price?.productsInCart?.quantity;
-        });
+        cartList.products?.map( (price) => (
+            sum += parseInt(price.price) * price?.productsInCart?.quantity
+        ));
 
         return sum;
     }
