@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
 *{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
 }
 
 .mt-1{
@@ -42,4 +45,21 @@
 
 .pointer{
     cursor: pointer;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.ovh{
+    overflow: hidden;
+}
+
+#root{
+    overflow: hidden;
+}
+
+.swal2-container {
+  z-index: 20000 !important;
 }
