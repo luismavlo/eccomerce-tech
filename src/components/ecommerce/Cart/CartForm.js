@@ -35,8 +35,6 @@ const CartForm = () => {
         dispatch(startDeleteProductCart(id));
     }
 
-    console.log( typeof cartList)
-
     return (
         <div className="cart_products">
             <h3>Shoping Cart <button onClick={ () => dispatch(closeCart(false))} ><i className="fa-solid fa-x"></i></button></h3>
@@ -66,7 +64,9 @@ const CartForm = () => {
             }
             {
                 Object.keys(cartList).length === 0 ? (
-                    <span></span>
+                    <h2>You have nothing in your shopping cart. Continue Shopping</h2>
+                ) : cartList.products?.length === 0 ? (
+                    <h2>You have nothing in your shopping cart. Continue Shopping</h2>
                 ) : (
                     <div className="cart_subtotal">
                         <p><span>Subtotal:</span> { subtotal() }.00</p>

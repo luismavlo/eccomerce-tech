@@ -14,7 +14,8 @@ export const startUpdateQuantity = (id, newQuantity) => {
         axios.patch('https://ecommerce-api-react.herokuapp.com/api/v1/cart', { "id": id, "newQuantity": newQuantity }, getConfig())
             .then(res => {
                 dispatch(updateProductCart());
-                dispatch(setCart(res.data.data.cart));
+                axios.get("https://ecommerce-api-react.herokuapp.com/api/v1/cart", getConfig())
+                    .then(res => dispatch(setCart(res.data.data.cart)))
             });
     }
 }
@@ -23,7 +24,6 @@ export const startDeleteProductCart = (id) => {
     return (dispatch) =>{
         axios.delete(`https://ecommerce-api-react.herokuapp.com/api/v1/cart/${id}`, getConfig())
             .then(res => {
-                console.log(res)
                 dispatch(deleteProductCart())
                 axios.get("https://ecommerce-api-react.herokuapp.com/api/v1/cart", getConfig())
                     .then(res => dispatch(setCart(res.data.data.cart)))
