@@ -1,0 +1,16 @@
+@import './base/settings';
+@import url(./base/_base.scss);
+
+
+//components
+@import url(./components/_header.scss);
+@import url(./components/_slider.scss);
+@import url(./components/_home.scss);
+@import url(./components/_footer.scss);
+@import url(./components/_about.scss);
+@import url(./components/_contact.scss);
+@import url(./components/_shop.scss);
+@import url(./components/_productScreen.scss);
+@import url(./components/_modal.scss);
+@import url(./components/_purchasesScreen.scss);
+@import url(./components//_cartScreen.scss);

@@ -1,0 +1,14 @@
+export {default as promo1} from './image_promo_1.jpg';
+export {default as promo2} from './image_promo_2.jpg';
+export {default as promo3} from './image_promo_3.jpg';
+export {default as promo4} from './image_promo_4.jpg';
+export {default as promo5} from './image_promo_5.jpg';
+export {default as huawei} from './image_promo_6.jpg';
+export {default as promo7} from './image_promo_7.jpg';
+export {default as promo8} from './image_promo_8.jpeg';
+export {default as aboutUs} from './image_about_1.jpg';
+export {default as aboutOs} from './image_about_2.jpg';
+export {default as partnerUno} from './image_partner_1.jpg';
+export {default as partnerDos} from './image_partner_2.jpg';
+export {default as partnerTres} from './image_partner_3.jpg';
+export {default as partnerCuatro} from './image_partner_4.jpg';
