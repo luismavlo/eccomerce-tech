@@ -7,7 +7,7 @@ const PurchaseInfo = ({ purchase }) => {
            {
                 purchase.products?.map( product => (
                     <>
-                        <p key={product.id}>{product.title}</p>
+                        <p>{product.title}</p>
                         <span>{product.productsInCart?.quantity}</span>
                         <p>$ {parseInt(product.price) * product.productsInCart?.quantity}.00</p>
                     </>
