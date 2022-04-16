@@ -21,13 +21,13 @@ const StoreRouter = () => {
             } 
 
             <Header />
-            <Routes>
-                <Route path="product/:id" element={<ProductScreen />} />
-                <Route path="about" element={<AboutScreen />} />
-                <Route path="contact" element={<ContactScreen />} />
-                <Route path="shop" element={<ShopScreen />} />
-                <Route path="/*" element={<HomeScreen />} />
-            </Routes>
+                <Routes>
+                    <Route path="product/:id" element={<ProductScreen />} />
+                    <Route path="about" element={<AboutScreen />} />
+                    <Route path="contact" element={<ContactScreen />} />
+                    <Route path="shop" element={<ShopScreen />} />
+                    <Route path="/*" element={<HomeScreen />} />
+                </Routes>
             <Footer />
         </>
     )
