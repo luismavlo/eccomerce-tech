@@ -33,8 +33,6 @@ const Purchases = () => {
 
     const pagina = pageNumber => setCurrentPage(pageNumber);
 
-    console.log(currentPurchases.length)
-
     return (
         <>
             <article className="container_puchases">
